@@ -1,0 +1,21 @@
+<%include partials/header%>
+<div class="ui main text container segment">
+    <div class="ui huge header">Edit Blog</div>
+    <form action="/blogs/<%=b._id%>?_method=PUT" class="ui form" method="POST">
+        <div class="field">
+            <label>Title</label>
+            <input type="text" name="blog[title]" value=<%=b['title']%>>
+        </div>
+        <div class="field">
+            <label>Image</label>
+            <input type="text" name="blog[image]" value=<%=b['image']%>>
+        </div>
+        <div class="field">
+            <label>Blog Content</label>
+            <textarea name="blog[body]"><%=b['body']%></textarea>
+        </div>
+        
+        <input type="submit" class="ui inverted blue button">
+    </form>
+</div>
+<%include partials/footer%>
